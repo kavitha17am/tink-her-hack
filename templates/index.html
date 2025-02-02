@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Recommendation</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">TAILORED BOOK LIST!!</h1>
+        <h2 class="title">Tailor your Book..♡</h2>
+        <div class="form-group">
+            <label for="genre">Choose a genre:</label>
+            <select id="genre" class="dropdown">
+                <option value="Fiction">Fiction</option>
+                <option value="Science Fiction">Science Fiction</option>
+                <option value="Fantasy">Fantasy</option>
+                <option value="Horror">Horror</option>
+                <option value="Rom-Com">Rom-Com</option>
+            </select>
+            <button id="recommend-btn" class="btn">Get Recommendations</button>
+        </div>
+        <h3 class="subtitle">Recommended Books:</h3>
+        <ul id="book-list" class="book-list"></ul>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
